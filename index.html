@@ -7,115 +7,47 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 <meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1">
 <script src="js/jquery.min.js" type="text/javascript"></script>
-<script src="js/zip.min.js" type="text/javascript"></script>
-<script type="text/javascript">
-    document.write("<script src='js/config.js?"+new Date().getTime()+"'><\/script>");
-</script>
 <title></title> 
 <link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAA8UExURf///7e3tlEQLLcxd5+fndo9kY+PjQICAP9KrJkoYkREQHgdSikGDu9En9PT0uLi4mpqZ8c3gykpIcfHxhq6gGwAAAGxSURBVFjD7ZfdtoIgEIWRn2QUJO393/WISs2E1Iitdbpo7rD4ZDbMHhTtyRA/wFcCHBhr7Qi1ALAplKsAOGMf4SX+6aJvYo6b7l4AyHxrzfa4Ec0gHhEuRQCdb/369CqeYygAFJ2fVqAzgGh2Af06DWLqfdyLvggIuwC/vDXXngsArFsGGLSe4mDSQymFqKB3BQAW/hpCtwOQS/4tA1A4B0sG7gRAFRSYzyAPMJ4FmE+swMoTgOUc+74esBmBAagEOFxGCo5v41MtomS4AOlpMQMFTDrEmthK4lU536NHAN2gUpxKjiSpIyVP1GU7yUy1J0KoAuD2prFISCuRdYC4Eo90zACa0dpWgzcYoOet7KKYZREJwd/9IQKCPtxc4S5CBFwrurNPR6GpBIxJxVqA+nfAeEgDSOeWiii5AImKD9dmmwDdG0D899hmdwXDBkBmyfCoBe4KSFcAVI0cgMP1Pw9HPOYAttuRAeIqW04DBwA2j+SqLMDa2eyOoXEBzpfmMwHPl0zUmpgAooPBZ4INmBFq3Qva5Q8A9uM0IN7ST32xaHwzrQFMoWwHv8++rwD8ATKoawZTUZPxAAAAAElFTkSuQmCC">
 <style>
 *{margin:0;padding:0;text-decoration:none;}
 ul{list-style:none;}
 body{font-family:Droid Sans,Helvetica,Arial;text-align:center;background:#303030;}
-.top{width:100%;height:60px;padding:10px 0;position:relative;top:auto;background-color:rgba(255,0,76,0.75);z-index:2;}
-.container_block,.foot{margin:10px auto;width:95%;max-width:500px;padding:5px;background-color:rgba(60,60,60,0.43);position:relative;z-index:2;}
+.swiper-preview-container{margin:10px auto;width:1000px;font-size:0}
+.swiper-preview li{width:100px;display:inline-block}
+.swiper-preview li img{width:100px;}
+.swiper-container{margin:10px auto;width:1000px;font-size:0}
+.swiper-wrapper li{width:333.33px;display:inline-block} 
+.swiper-wrapper li img{width:330px;} 
+.swiper-slide{width:100%;height:100%;}
+.swiper-slide img{width:500px;margin:auto}
 .p_color_w{color:#fff}.p_color_b{color:#000}.p_color_g{color:#04ff18}.p-l{font-size:24px;}.p-m{font-size:16px;}.p-s{font-size:13px;}
-.list{margin:10px auto;width:95%;max-width:500px;padding:10px 0;background-color:rgba(0,0,0,0.2);}
-.reserve{margin:10px auto;width:80%;max-width:500px;}
-.list a{display:block;color:#fff;padding:5px;border-radius:20px;margin:5px auto;width:80%;}
-.reserve a{display:block;color:#fff;padding:5px;border-radius:20px;margin:5px auto;width:80%;max-width:300px;}
-.b_color_red{background-color:rgba(255,3,108,0.5);}.b_color_grey{background-color:rgba(0,0,0,0.45);}
-.b_color_green{background-color:rgba(83,173,61,0.57);}.youjian{color:#2c90ff;font-weight:900;background-color:rgba(0,0,0,0.58)}
-.swiper-container,.swiper-container:after{position:fixed;width:100%;height:100%;top:0px;left:0px;z-index:2;}
-.swiper-container:after{content:'';background:transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABhJREFUeNpiYGBgePz//38GRhABAgABBgBFTAbfCBNE2AAAAABJRU5ErkJggg==) repeat;}
-.swiper-slide{width:100%;height:100%;position:absolute;top:0px;left:0px;background-size:6000% 100% ;background-position:-0 -0;background-repeat:none;z-index:0;}
-.swiper-slide img{position: absolute;top: 50%;left: 50%;min-width: 100%;min-height: 100%;transform:translate(-50%,-50%);}
-.swiper-slide video{position: absolute;top: 50%;left: 50%;min-width: 100%;min-height: 100%;transform:translate(-50%,-50%);width:auto;height:auto;}
 .slidetemp,.swiper-slide{display:block;}
 
  </style>
 </head>
 <body>
+<div class="top">
+  <div class="p-l p_color_w">How to make webp pictures</div>
+  <div class="p-s p_color_w">Demo animation</div>
+  <div class="p-s p_color_w">You can download observation</div>
+</div>
+<div class="swiper-preview-container" data-listimg='0' data-listvideo='0'>
+<ul class="swiper-preview">
+</ul>
+</div>
 <div class="swiper-container" data-listimg='0' data-listvideo='0'>
 <ul class="swiper-wrapper">
-<li class="swiper-slide"></li>
+<li><img src="images/daxiongluoli_pc.webp"><p class="p-l p_color_w">jpg</p></li>
+<li><img src="images/daxiongluoli_wap.webp"><p class="p-l p_color_w">Large size(webp)</p></li>
+<li><img src="images/daxiongluoli.jpg"><p class="p-l p_color_w">Small size(webp)</p></li>
 </ul>
-</div>
- <ul class="slidetemp">
-</ul>
-<div class="top">
-  <div class="p-l p_color_w">亲爱的访客</div>
-  <div class="p-s p_color_w">请粉丝们记住新域名，收藏本页地址以及邮箱。</div>
-  <div class="p-s p_color_w">手机用户请截屏保存。</div>
-</div>
-<div class="container_block">
-<div class="p-s p_color_w">部分大陆浏览器可能会屏蔽本站，建议您使用Chrome访问！</div>  
-<div class="list">
-</div>
-<div class="p-s p_color_w">↓备用发布页↓</div>
-<div class="reserve">
-</div>    
-</div>
-<div class="foot">
 </div>
 <script type="text/javascript">
-$(document).ready(function(){ 
-$('title').text(title);
-var reg= /^http(s)?:\/\/(.*?)/i;
-$.each(fabuye,function(idx,obj){
-$('.reserve').append('<a class="p-s b_color_green" href="'+obj.link+'" target="_blank"><span>'+idx+obj.link.replace(reg,"")+'</span></a>');
-});
-$.each(links,function(idx,obj){
-$('.list').append('<a class="p-m b_color_grey" href="'+obj.link+'" target="_blank"><span>'+idx+obj.link.replace(reg,"")+'</span></a>');
-});
-$('.list a').eq(0).addClass('b_color_red').removeClass('b_color_grey').prepend('<b class="p_color_g">●</b>');
-$.each(foot,function(idx,obj){
-$('.foot').append('<div class="p-s p_color_w">'+obj.txt+'</div>');
-});
-
-var videostart=1;
-var imgstart=1;
-if ($(window).width()>=768){
-$('.swiper-slide').append('<video id="my_video"  width="100%" height="100%" preload="load" playsinline="true" webkit-playsinline="true" x-webkit-airplay="allow" airplay="allow" x5-video-player-type="h5" x5-video-player-fullscreen="true" x5-video-orientation="portrait" autoplay="autoplay" muted="true" loop="loop"><source src="https://cdn.jsdelivr.net/gh/sesefox/sesefox.github.io/js/pMX7N.mp4" type="video/mp4"></video>');
-$('.top').css('background-color',' rgba(45,45,45,0.53)');
-var video=document.getElementById("my_video"); 
-video.play(); 
-}else{
-$('.swiper-slide').append('<img src="" id="imgVideo">');
-startimg(imgstart);
-};
-
-function startimg(imgstart){
-if (imgstart > 5){
-return;
-};
-$.ajax({
-      url: '/js/img'+imgstart+'.js',
-      dataType: 'script',
-      cache: true
-}).done(function() {
-$('.swiper-container').attr('data-listimg',parseInt($('.swiper-container').attr('data-listimg'))+1);
-imgstart++;
-startimg(imgstart);
-});
-};
-
-var canready = setInterval(function(){
-if($('.swiper-container').attr('data-listimg')>0){
-clearInterval(canready);
-$('.top').css('background-color',' rgba(45,45,45,0.53)');
- animationimg();
-}
-}, 300);
-function animationimg(){
-var num=0;
-var list=1;
-setInterval(function(){
-if (num > 59){num=0;if(list>=5 || parseInt($('.swiper-container').attr('data-listimg')) <= list){list=1}else{list=list+1}};
-$('#imgVideo').attr('src',eval('img'+list)[num]);
-num++;
-}, 100);
-};
+var webps = ['sexfox', 'daxiongluoli', 'Tifa', 'tianmeiluoli', 'Sunny', 'xingyun', 'dahai', 'qingchunmeinv', 'fadayujie', 'hanfuxiaojiejie'];
+$.each(webps,function(idx,obj){
+$('.swiper-preview').append('<li><img src="images/'+obj+'_preview.jpg"></li>');
+$('.swiper-wrapper').append('<li><img src="images/'+obj+'.jpg"><p class="p-l p_color_w">jpg</p></li><li><img src="images/'+obj+'_pc.webp"><p class="p-l p_color_w">Large size(webp)</p></li><li><img src="images/'+obj+'_wap.webp"><p class="p-l p_color_w">Small size(webp)</p></li>');
 });
 
 </script>
